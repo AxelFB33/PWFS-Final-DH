@@ -34,23 +34,15 @@ class UsuariosController extends Controller
                     }
 
                     return view("/profile");
-                } else {
-                    $error = "Error en la contrasenha.";
-
-                    $vac = compact("error");
-
-                    return view("login", $vac);
                 }
-            } else {
-
-                $error = "Error en el email.";
-
-                $vac = compact("error");
-
-                return view("login", $vac);
-
             }
         }
+
+        $error = "Email o Contrasenha incorrectos.";
+
+        $vac = compact('error');
+
+        return view('/login', $vac);
 
     }
 
@@ -67,13 +59,14 @@ class UsuariosController extends Controller
 
         foreach($usuariosRegistrados as $usuario){
 
-            if($usuario["email"] == session('email')){
+            if($usuario["dni"] == session('dni')){
         
                 if ($request["imagen"] != NULL){
         
                     $ruta = $request->file("imagen")->store("public");
                     $nombreArchivo = basename($ruta);
-                    $usuarioNuevo->imagen = $nombreArchivo;
+                    $usuario->imagen = $nombreArchivo;
+                    $request->session()->put("imagen", $nombreArchivo);
                 
                 }
                 $usuario->ciudad = $request["ciudad"];
@@ -85,8 +78,7 @@ class UsuariosController extends Controller
                     "email" => $request["email"],
                     "ciudad" => $request["ciudad"],
                     "direccion" => $request["direccion"],
-                    "celular" => $request["celular"],
-                    "imagen"=> $request["imagen"]
+                    "celular" => $request["celular"]
                 ]);
                 
                 $usuario->save();

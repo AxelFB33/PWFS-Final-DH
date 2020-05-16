@@ -43,13 +43,13 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Email: </label>
 							<div class="col-md-8 inputGroupContainer">
-							   <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" value="@if(isset($cookieUsuario)){{$cookieUsuario["email"]}}@endif" required="true" type="text"></div>
+							   <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" value="@if(isset($cookieUsuario)){{$cookieUsuario["email"]}}@else{{""}}@endif" required="true" type="text"></div>
 							</div>
 						 </div>
 						 <div class="form-group">
                             <label class="col-md-4 control-label">Contraseña: </label>
                             <div class="col-md-8 inputGroupContainer">
-                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span><input id="contrasenha" name="contrasenha" placeholder="Contraseña" value="@if(isset($cookieUsuario)){{$cookieUsuario["contrasenha"]}}@endif" class="form-control" required="true" value="" type="password"></div>
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span><input id="contrasenha" name="contrasenha" placeholder="Contraseña" value="@if(isset($cookieUsuario)){{$cookieUsuario["contrasenha"]}}@endif" class="form-control" required="true" type="password"></div>
                             </div>
                          </div>
 						 <br>

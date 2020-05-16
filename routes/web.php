@@ -50,3 +50,16 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::post('/login', "UsuariosController@verificarUsuario");
+
+//STOCK
+Route::get('/stock', function(){
+    return view('stock');
+});
+Route::post('/stock', "ProductosController@agregarProducto");
+
+Route::get('/show-stock', "ProductosController@mostrarProductos");
+Route::post('/show-stock', "ProductosController@eliminarProducto");
+
+Route::get('/edit', "ProductosController@cualEdito");
+Route::post('/edit', "ProductosController@mostrarEditar");
+Route::post('/edit-stock', "ProductosController@editar");

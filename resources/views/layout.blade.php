@@ -88,6 +88,13 @@
 						@endif
 					">Iniciar Sesion</a>
 					</li>
+					@if(session('tipoUsuario_id')==1)
+					<li class="p-b-9">
+						<a href="/show-cart" class="s-text7">
+							Productos
+						</a>
+					</li>
+					@endif
 				</ul>
 			</nav>
 		</div>
@@ -237,6 +244,13 @@
 						@endif
 						">Iniciar Sesion</a>
 							</li>
+							@if(session('tipoUsuario_id')==1)
+					<li class="p-b-9">
+						<a href="/show-cart" class="s-text7">
+							Productos
+						</a>
+					</li>
+					@endif
 						</ul>
 					</nav>
 				</div>
@@ -363,6 +377,13 @@
 						@endif
 					">Iniciar Sesion</a>
 					</li>
+					@if(session('tipoUsuario_id')==1)
+					<li class="p-b-9">
+						<a href="/show-cart" class="s-text7">
+							Productos
+						</a>
+					</li>
+					@endif
 				</ul>
 			</nav>
 		</div>
@@ -500,6 +521,29 @@
 					</li>
 				</ul>
 			</div>
+
+			@if(session('tipoUsuario_id') == 1)
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon3">
+				<h4 class="s-text12 p-b-30">
+					Productos
+				</h4>
+
+				<ul>
+					<li class="p-b-9">
+					<a class="s-text7" href="/stock">Agregar Producto</a>
+					</li>
+					<li class="p-b-9">
+					<a class="s-text7" href="/edit">Editar Producto</a>
+					</li>
+					<li class="p-b-9">
+					<a class="s-text7" href="/show-stock">Eliminar Producto</a>
+					</li>
+					<li class="p-b-9">
+					<a class="s-text7" href="/show-stock" >Mostrar Productos</a>
+					</li>
+				</ul>
+			</div>
+			@endif
 
 		</div>
 

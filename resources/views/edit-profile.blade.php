@@ -76,7 +76,7 @@
                             "alt="imagen de perfil"/>
                             <div class="file btn btn-lg btn-primary">
                                 Cambiar Foto
-                                <input type="file" name="imagen" value="/storage/{{ session('imagen') }}"/>
+                                <input type="file" name="imagen"/>
                             </div>
                         </div>
                     </div>

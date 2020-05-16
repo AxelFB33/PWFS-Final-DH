@@ -14,10 +14,6 @@
                             /storage/{{ "traje.jpg" }}
                             @endif
                             "alt="imagen de perfil"/>
-                            <div class="file btn btn-lg btn-primary">
-                                Cambiar Foto
-                                <input type="file" name="file"/>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -33,6 +29,11 @@
                                     <a class="nav-link active" style="background-color: lightgray; border-top: 1px black solid;" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">Mis Datos</a>
                                 </li>
                             </ul>
+                               @if(session('tipoUsuario_id') == 1)
+                                  <h2 style="color: blue; font-weight: bold;">{{ "Administrador" }}</h2>
+                               @else
+                                    <h2 style="color: blue;">{{ "Cliente" }}</h2><br>
+                                @endif
                         </div>
                     </div>
                 </div>
