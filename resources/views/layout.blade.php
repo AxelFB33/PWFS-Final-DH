@@ -90,7 +90,7 @@
 					</li>
 					@if(session('tipoUsuario_id')==1)
 					<li class="p-b-9">
-						<a href="/show-cart" class="s-text7">
+						<a href="/show-stock" class="s-text7">
 							Productos
 						</a>
 					</li>
@@ -246,7 +246,7 @@
 							</li>
 							@if(session('tipoUsuario_id')==1)
 					<li class="p-b-9">
-						<a href="/show-cart" class="s-text7">
+						<a href="/show-stock" class="s-text7">
 							Productos
 						</a>
 					</li>
@@ -379,7 +379,7 @@
 					</li>
 					@if(session('tipoUsuario_id')==1)
 					<li class="p-b-9">
-						<a href="/show-cart" class="s-text7">
+						<a href="/show-stock" class="s-text7">
 							Productos
 						</a>
 					</li>
